@@ -1,4 +1,4 @@
-package fr.skykits.lb;
+package fr.skykits.lb.event;
 
 
 import java.util.ArrayList;
@@ -21,6 +21,8 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionType;
+
+import fr.skykits.lb.Main;
 
 
 public class EventSponge extends JavaPlugin implements Listener {
