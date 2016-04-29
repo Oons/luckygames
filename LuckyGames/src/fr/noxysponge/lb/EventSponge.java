@@ -1,4 +1,4 @@
-package fr.skykits.lb;
+package fr.noxysponge.lb;
 
 
 import java.util.ArrayList;
@@ -23,10 +23,10 @@ import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionType;
 
 
-public class Main extends JavaPlugin implements Listener {
+public class EventSponge extends JavaPlugin implements Listener {
 	
 	public final Logger logger = Logger.getLogger("Minecraft");
-	public static Main plugin;
+	public static EventSponge plugin;
 	
 	//prints text to console when disabled
 		@Override
@@ -808,3 +808,4 @@ public class Main extends JavaPlugin implements Listener {
 		w.dropItemNaturally(l, new ItemStack(Material.ENDER_PEARL, 10));
 	}
 }
+
