@@ -1,4 +1,4 @@
-main: fr.skykits.lb.Main
+main: fr.skykits.lb.event
 name: LuckyGames
 author: noxy
 version: 0.1
