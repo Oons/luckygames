@@ -1,4 +1,4 @@
-package fr.noxysponge.lb;
+package fr.skykits.lb.event;
 
 
 import java.util.ArrayList;
@@ -21,7 +21,6 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionType;
-
 
 public class EventSponge extends JavaPlugin implements Listener {
 	
@@ -311,7 +310,7 @@ public class EventSponge extends JavaPlugin implements Listener {
 		int diamondRand = 0 + (int)(Math.random() * diamondDropRate);
 		
 		for (int i = 0; i < diamondRand; ++i) {
-			
+			int howManyPossibleHappenstances = 10;
 		
 			//float xRand = -5 + (float)(Math.random() * howManyPossibleHappenstances);
 			//float zRand = -5 + (float)(Math.random() * howManyPossibleHappenstances);
@@ -323,7 +322,7 @@ public class EventSponge extends JavaPlugin implements Listener {
 		int goldRand = 5 + (int)(Math.random() * goldDropRate);
 		
 		for (int i = 0; i < goldRand; ++i) {
-			
+			int howManyPossibleHappenstances = 10;
 		
 			//float xRand = -5 + (float)(Math.random() * howManyPossibleHappenstances);
 			//float zRand = -5 + (float)(Math.random() * howManyPossibleHappenstances);
@@ -335,7 +334,7 @@ public class EventSponge extends JavaPlugin implements Listener {
 		int redstoneRand = 20 + (int)(Math.random() * redstoneDropRate);
 		
 		for (int i = 0; i < redstoneRand; ++i) {
-			
+			int howManyPossibleHappenstances = 10;
 		
 			//float xRand = -5 + (float)(Math.random() * howManyPossibleHappenstances);
 			//float zRand = -5 + (float)(Math.random() * howManyPossibleHappenstances);
@@ -347,7 +346,7 @@ public class EventSponge extends JavaPlugin implements Listener {
 		int lapisRand = 1 + (int)(Math.random() * lapisDropRate);
 		
 		for (int i = 0; i < lapisRand; ++i) {
-			
+			int howManyPossibleHappenstances = 10;
 		
 			//float xRand = -5 + (float)(Math.random() * howManyPossibleHappenstances);
 			//float zRand = -5 + (float)(Math.random() * howManyPossibleHappenstances);
@@ -359,7 +358,7 @@ public class EventSponge extends JavaPlugin implements Listener {
 		int coalRand = 32 + (int)(Math.random() * coalDropRate);
 		
 		for (int i = 0; i < coalRand; ++i) {
-			
+			int howManyPossibleHappenstances = 10;
 		
 			//float xRand = -5 + (float)(Math.random() * howManyPossibleHappenstances);
 			//float zRand = -5 + (float)(Math.random() * howManyPossibleHappenstances);
@@ -419,7 +418,7 @@ public class EventSponge extends JavaPlugin implements Listener {
 	public void ironTools(Location l, Player p) {
 		World w = p.getWorld();
 		
-		List<ItemStack> list = new ArrayList<ItemStack>();
+		List<ItemStack> list = new ArrayList();
 		
 		list.add(new ItemStack(Material.IRON_AXE));
 		list.add(new ItemStack(Material.IRON_HOE));
@@ -441,7 +440,7 @@ public class EventSponge extends JavaPlugin implements Listener {
 	public void chainArmor(Location l, Player p) {
 		World w = p.getWorld();
 		
-		List<ItemStack> list = new ArrayList<ItemStack>();
+		List<ItemStack> list = new ArrayList();
 		
 		list.add(new ItemStack(Material.CHAINMAIL_BOOTS));
 		list.add(new ItemStack(Material.CHAINMAIL_LEGGINGS));
@@ -460,7 +459,7 @@ public class EventSponge extends JavaPlugin implements Listener {
 	public void diamondTools(Location l, Player p) {
 		World w = p.getWorld();
 		
-		List<ItemStack> list = new ArrayList<ItemStack>();
+		List<ItemStack> list = new ArrayList();
 		
 		list.add(new ItemStack(Material.DIAMOND_AXE));
 		list.add(new ItemStack(Material.DIAMOND_PICKAXE));
@@ -480,7 +479,7 @@ public class EventSponge extends JavaPlugin implements Listener {
 	public void ironArmor(Location l, Player p) {
 		World w = p.getWorld();
 		
-		List<ItemStack> list = new ArrayList<ItemStack>();
+		List<ItemStack> list = new ArrayList();
 		
 		list.add(new ItemStack(Material.IRON_BOOTS));
 		list.add(new ItemStack(Material.IRON_LEGGINGS));
@@ -499,7 +498,7 @@ public class EventSponge extends JavaPlugin implements Listener {
 	public void diamondArmor(Location l, Player p) {
 		World w = p.getWorld();
 		
-		List<ItemStack> list = new ArrayList<ItemStack>();
+		List<ItemStack> list = new ArrayList();
 		
 		list.add(new ItemStack(Material.DIAMOND_BOOTS));
 		list.add(new ItemStack(Material.DIAMOND_LEGGINGS));
@@ -542,6 +541,7 @@ public class EventSponge extends JavaPlugin implements Listener {
 			w.dropItemNaturally(l, new ItemStack(Material.BOOK));
 		}
 		
+		int rand2 = 0 + (int)(Math.random() * ((8 - 0) + 1));
 		for (int i = 0; i < (1 + rand); ++i) {
 			w.dropItemNaturally(l, new ItemStack(Material.BOOKSHELF));
 		}
@@ -798,7 +798,8 @@ public class EventSponge extends JavaPlugin implements Listener {
 				case 4: w.dropItemNaturally(l, new ItemStack(Material.SKULL)); break;
 				case 5: w.dropItemNaturally(l, new ItemStack(Material.SKULL)); break;
 			}
-		}
+		}	
+		
 	}
 
 	public void enderPearls(Location l, Player p) {
@@ -808,4 +809,3 @@ public class EventSponge extends JavaPlugin implements Listener {
 		w.dropItemNaturally(l, new ItemStack(Material.ENDER_PEARL, 10));
 	}
 }
-
