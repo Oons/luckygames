@@ -12,7 +12,8 @@ public enum Gamestate {
 	private boolean canJoin;
 	
 	
-	Gamestate(boolean b){
+	Gamestate(boolean b){ 
+		
 		canJoin = b; 
 	}
 	

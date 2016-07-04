@@ -18,6 +18,7 @@ public class Signs extends JavaPlugin implements Listener {
 	
 	public void onDisable(){
 		System.out.println("[LuckySign] >> OFF");
+		
 	}
 	
 	public void onStart(){

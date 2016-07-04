@@ -21,6 +21,7 @@ public class LuckyClick implements Listener {
 	}
 	
 	ArrayList<String> Rose = new ArrayList<String>();
+	
 	ArrayList<String> Bleu = new ArrayList<String>();
 	//HashMap<String> Joueur = new HashMap<String>();
 	

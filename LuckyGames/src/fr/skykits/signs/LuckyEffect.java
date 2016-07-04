@@ -17,6 +17,7 @@ public class LuckyEffect implements Listener {
 
 	@EventHandler
 	public void OnBreak(BlockBreakEvent e){
+		
 		Block b = e.getBlock();
 		if(b.equals(Material.SPONGE)){
 			Player p = e.getPlayer();
